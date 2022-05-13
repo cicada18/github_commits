@@ -67,10 +67,7 @@ class GithubCommitsController < ApplicationController
     else
       resp_json = {success: false, error: t('lables.no_commit_data_found') }
     end
-
-    respond_to do |format|
-      format.json { render json: resp_json, status: :ok }
-    end
+    render json: resp_json,status: 200
 
   end
 
